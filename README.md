@@ -87,7 +87,7 @@ These choices contribute to a robust, secure, and maintainable MovieCollectionAP
 
 ## Other Information
 
-During development, we used Serilog for logging to a log file named "log.txt" at the absolute path "@"C:\Logs\log.txt". The log records important events and errors, aiding in debugging and monitoring.
+During development, we used Serilog for logging to a log file named "log.txt" at the absolute path `@"C:\Logs\log.txt"`. The log records important events and errors, aiding in debugging and monitoring.
 
 The API follows RESTful conventions, and error responses include detailed messages to help developers understand and resolve issues.
 
