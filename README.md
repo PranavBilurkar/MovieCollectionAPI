@@ -1,6 +1,6 @@
 # Movie Collection API
 
-This is a .NET Framework 4.8 based web API for managing a movie collection. The API allows users to register, login, and perform CRUD operations on movie records. Users can have different roles, such as "Admin" and "User," which provide different levels of access to the movie collection.
+This is a .NET Framework 4.8 based REST API for managing a movie collection. The API allows users to register, login, and perform CRUD operations on movie records. Users can have different roles, such as "Admin" and "User," which provide different levels of access to the movie collection.
 
 ## Table of Contents
 
