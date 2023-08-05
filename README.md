@@ -23,12 +23,13 @@ The API provides the following endpoints:
 
 1. `POST /api/user/register`: Register a new user.
 2. `POST /api/user/login`: Login and obtain a JWT token for authentication.
-3. `GET /api/user/all`: Get a list of all users (Admin role required).
+3. `GET /api/user/all`: Get a list of all users (For Testing purpose).
 4. `GET /api/movie/all`: Get a list of all movies.
 5. `GET /api/movie/{id}`: Get details of a specific movie by its ID.
-6. `POST /api/movie/add`: Add a new movie to the collection (User role required).
+6. `POST /api/movie/add`: Add a new movie to the collection.
 7. `PUT /api/movie/update/{id}`: Update the details of an existing movie (Admin role or movie owner required).
 8. `DELETE /api/movie/delete/{id}`: Delete a movie from the collection (Admin role or movie owner required).
+9. `GET /api/movies/search?keyword={keyword}: Search for movies by keyword.
 
 ## Authentication and JWT Tokens
 
