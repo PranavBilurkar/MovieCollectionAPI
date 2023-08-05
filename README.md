@@ -48,11 +48,22 @@ The API implements role-based access control (RBAC) with two roles: "Admin" and 
 
 ## Unit Tests
 
-The MovieCollection.Test project contains unit tests for the API. To run the tests, open the Test Explorer in Visual Studio and click "Run All Tests."
+The MovieCollection.Test project contains unit tests for the API. To run the tests, open the Test Explorer in Visual Studio and click "Run Tests."
+
+## User Interface
+
+The MovieCollectionUI project provides a user-friendly web interface for managing movie collections. The UI allows users to:
+
+View the list of all movies in the collection.
+View details of a specific movie.
+Add a new movie to the collection (authentication required).
+Update an existing movie (authentication required).
+Delete a movie from the collection (authentication required).
+Search for movies by keyword.
 
 ## Other Information
 
-During development, we used Serilog for logging to a log file named "log.txt" in the project's root directory. The log records important events and errors, aiding in debugging and monitoring.
+During development, we used Serilog for logging to a log file named "log.txt" at the absolute path "@"C:\Logs\log.txt". The log records important events and errors, aiding in debugging and monitoring.
 
 The API follows RESTful conventions, and error responses include detailed messages to help developers understand and resolve issues.
 
