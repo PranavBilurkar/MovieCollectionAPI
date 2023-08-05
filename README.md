@@ -62,6 +62,28 @@ Update an existing movie (authentication required).
 Delete a movie from the collection (authentication required).
 Search for movies by keyword.
 
+## Motivation Behind Choices
+
+1. **Serilog**: Chose Serilog for logging due to its simplicity, flexibility, structured events and performance. It offers easy log message handling with various sinks like files and databases, aiding scalability and monitoring.
+
+2. **Unity Container DI & Separation of Concerns**: Implemented IoC with Unity for DI to promote loosely coupled and testable code. Unity's configuration process allows easy dependency integration, enhancing code quality. Additionally, we followed the principle of separation of concerns for code modularity and maintenance ease.
+
+3. **JWT Authentication**: Chose JWT for secure communication between client and server. Its stateless nature avoids server-side storage, making it suitable for modern web apps.
+
+4. **Custom Exception Handling**: Implemented custom exception handling for meaningful error responses, ensuring a better user experience and efficient debugging.
+
+5. **Role-Based Access Control**: Implemented RBAC to restrict endpoint access based on user roles, maintaining data security.
+
+6. **Unit Testing with MSTest**: Used MSTest to ensure code quality and identify bugs early in development.
+
+7. **Dockerization**: Added Dockerfile for containerization, providing a consistent and isolated environment for deployment.
+
+8. **Separation of Concerns**: Followed this principle for code modularity and maintenance ease.
+
+9. **Code Documentation**: Emphasized code documentation for better understanding and collaboration among developers.
+
+These choices contribute to a robust, secure, and maintainable MovieCollectionAPI, providing an efficient user experience and smooth movie data handling.
+
 ## Other Information
 
 During development, we used Serilog for logging to a log file named "log.txt" at the absolute path "@"C:\Logs\log.txt". The log records important events and errors, aiding in debugging and monitoring.
