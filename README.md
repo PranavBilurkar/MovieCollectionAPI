@@ -50,11 +50,11 @@ The API implements role-based access control (RBAC) with two roles: "Admin" and 
 
 ## Unit Tests
 
-The MovieCollection.Test project contains unit tests for the API. To run the tests, open the Test Explorer in Visual Studio and click "Run Tests."
+The `MovieCollection.Test` project contains unit tests for the API. To run the tests, open the Test Explorer in Visual Studio and click "Run Tests."
 
 ## User Interface
 
-The MovieCollectionUI project provides a user-friendly web interface for managing movie collections. The UI allows users to:
+The `MovieCollection.UI` project provides a user-friendly web interface for managing movie collections. The UI allows users to:
 
 View the list of all movies in the collection.
 View details of a specific movie.
