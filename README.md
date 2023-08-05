@@ -89,6 +89,8 @@ These choices contribute to a robust, secure, and maintainable MovieCollectionAP
 
 During development, we used Serilog for logging to a log file named `log.txt` at the absolute path `@"C:\Logs\log.txt"`. The log records important events and errors, aiding in debugging and monitoring.
 
+To interact with the MovieCollectionAPI and test its functionalities, you can use Postman, a powerful API testing tool. Postman provides an intuitive interface for sending various HTTP requests, including GET, POST, PUT, and DELETE, to the API endpoints.
+
 The API follows RESTful conventions, and error responses include detailed messages to help developers understand and resolve issues.
 
 If you encounter any problems or have any questions, feel free to open an issue in the GitHub repository.
