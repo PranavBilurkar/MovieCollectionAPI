@@ -83,6 +83,8 @@ Search for movies by keyword.
 
 9. **Code Documentation**: Emphasized code documentation for better understanding and collaboration among developers.
 
+10. **Monolithic Architecture**: As a single, cohesive unit; developing, testing, and deploying is generally more straightforward. Easier to debug and can be efficient for small to medium-sized applications with low complexity. 
+
 These choices contribute to a robust, secure, and maintainable MovieCollectionAPI, providing an efficient user experience and smooth movie data handling.
 
 ## Other Information
