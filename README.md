@@ -10,6 +10,7 @@ This is a .NET Framework 4.8 based web API for managing a movie collection. The 
 4. [Role-Based Access](#role-based-access)
 5. [Unit Tests](#unit-tests)
 6. [User Interface](#user-interface)
+7. [Motivation Behind Choices](#motivation-behind-choices)
 
 ## Installation and Setup
 
