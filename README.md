@@ -9,6 +9,7 @@ This is a .NET Framework 4.8 based web API for managing a movie collection. The 
 3. [Authentication and JWT Tokens](#authentication-and-jwt-tokens)
 4. [Role-Based Access](#role-based-access)
 5. [Unit Tests](#unit-tests)
+6. [User Interface](#user-interface)
 
 ## Installation and Setup
 
