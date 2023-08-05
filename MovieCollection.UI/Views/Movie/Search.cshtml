@@ -1,0 +1,41 @@
+﻿@using MovieCollectionAPI
+@model List<Movie>
+
+<h2>Search Movies</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="keyword">Keyword:</label>
+                    <input type="text" class="form-control" id="keyword" placeholder="Enter a keyword to search">
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+                <a href="/" class="btn btn-secondary">Back</a>
+            </form>
+        </div>
+    </div>
+    @if (Model != null && Model.Count > 0)
+    {
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h4>Search Results:</h4>
+                <ul>
+                    @foreach (var movie in Model)
+                    {
+                        <li><a href="/Movie/Details/@movie.Id">@movie.Title</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <p>No movies found matching the search criteria.</p>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,34 @@
+﻿@using MovieCollectionAPI
+@model List<Movie>
+
+<h2>Movies Collection</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Year</th>
+                        <th>Genre</th>
+                        <th>Director</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var movie in Model)
+                    {
+                        <tr>
+                            <td>@movie.Id</td>
+                            <td>@movie.Title</td>
+                            <td>@movie.Year</td>
+                            <td>@movie.Genre</td>
+                            <td>@movie.Director</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

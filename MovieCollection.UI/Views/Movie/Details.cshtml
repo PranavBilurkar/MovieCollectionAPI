@@ -1,0 +1,22 @@
+﻿@using MovieCollectionAPI
+@model Movie
+
+<h2>Movie Details</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    @Model.Title
+                </div>
+                <div class="card-body">
+                    <p><strong>Year:</strong> @Model.Year</p>
+                    <p><strong>Genre:</strong> @Model.Genre</p>
+                    <p><strong>Director:</strong> @Model.Director</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

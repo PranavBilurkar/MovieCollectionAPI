@@ -1,0 +1,32 @@
+﻿@using MovieCollectionAPI
+
+@model User
+
+<h2>User Registration</h2>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            @using (Html.BeginForm("Register", "User", FormMethod.Post, new { @class = "needs-validation", novalidate = "novalidate" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Username)
+                    @Html.TextBoxFor(m => m.Username, new { @class = "form-control", required = "required" })
+                    <div class="invalid-feedback">Please enter a username.</div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password)
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", required = "required" })
+                    <div class="invalid-feedback">Please enter a password.</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Register</button>
+                <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">Cancel</a>
+            }
+        </div>
+    </div>
+</div>
+
