@@ -30,7 +30,7 @@ The API provides the following endpoints:
 6. `POST /api/movie/add`: Add a new movie to the collection.
 7. `PUT /api/movie/update/{id}`: Update the details of an existing movie (Admin role or movie owner required).
 8. `DELETE /api/movie/delete/{id}`: Delete a movie from the collection (Admin role or movie owner required).
-9. `GET /api/movies/search?keyword={keyword}: Search for movies by keyword.
+9. `GET /api/movies/search?keyword={keyword}': Search for movies by keyword.
 
 ## Authentication and JWT Tokens
 
