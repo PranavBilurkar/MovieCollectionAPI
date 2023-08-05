@@ -15,7 +15,7 @@ This is a .NET Framework 4.8 based web API for managing a movie collection. The 
 1. Clone the repository to your local machine.
 2. Open the solution in Visual Studio (Version 2019 or later).
 3. Build the solution to restore NuGet packages and ensure all projects build successfully.
-4. Run the MovieCollection.API project. The API will be hosted on `http://localhost:5000/`.
+4. Run the MovieCollection.API project. The API will be hosted on `https://localhost:44361/`.
 
 ## API Endpoints
 
