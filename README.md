@@ -61,6 +61,14 @@ The API implements role-based access control (RBAC) with two roles: "Admin" and 
 
 The `MovieCollection.Test` project contains unit tests for the API. To run the tests, open the Test Explorer in Visual Studio and click "Run Tests."
 
+## Postman Collection
+I have provided a Postman collection (MovieCollectionAPI.postman_collection.json) in this repository. You can import this collection into Postman to easily send requests to the MovieCollection.API endpoints and explore its functionalities. To use the Postman collection, follow these steps:
+
+Open Postman:-
+1. Click on the "Import" button and choose the MovieCollectionAPI.postman_collection.json file from the repository.
+2. Once imported, you will see a collection named "MovieCollectionAPI" in Postman.
+3. You can now explore the different endpoints and send requests to the API directly from Postman
+
 ## User Interface
 
 The `MovieCollection.UI` project provides a user-friendly web interface for managing movie collections. The UI allows users to:
@@ -76,7 +84,7 @@ Search for movies by keyword.
 
 1. **Serilog**: Chose Serilog for logging due to its simplicity, flexibility, structured events and performance. It offers easy log message handling with various sinks like files and databases, aiding scalability and monitoring.
 
-2. **Unity Container DI & Separation of Concerns**: Implemented IoC with Unity for DI to promote loosely coupled and testable code. Unity's configuration process allows easy dependency integration, enhancing code quality. Additionally, we followed the principle of separation of concerns for code modularity and maintenance ease.
+2. **Unity Container DI & Separation of Concerns**: Implemented IoC with Unity for DI to promote loosely coupled and testable code. Unity's configuration process allows easy dependency integration, enhancing code quality. Additionally, I followed the principle of separation of concerns for code modularity and maintenance ease.
 
 3. **JWT Authentication**: Chose JWT for secure communication between client and server. Its stateless nature avoids server-side storage, making it suitable for modern web apps.
 
@@ -98,7 +106,7 @@ These choices contribute to a robust, secure, and maintainable MovieCollectionAP
 
 ## Other Information
 
-During development, we used Serilog for logging to a log file named `log.txt` at the absolute path `@"C:\Logs\log.txt"`. The log records important events and errors, aiding in debugging and monitoring.
+During development, I used Serilog for logging to a log file named `log.txt` at the absolute path `@"C:\Logs\log.txt"`. The log records important events and errors, aiding in debugging and monitoring.
 
 To interact with the MovieCollectionAPI and test its functionalities, you can use Postman, a powerful API testing tool. Postman provides an intuitive interface for sending various HTTP requests, including GET, POST, PUT, and DELETE, to the API endpoints.
 
