@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\MovieCollection.API\packages\Microsoft.NET.Test.Sdk.17.6.3\build\net462\Microsoft.NET.Test.Sdk.props" Condition="Exists('..\MovieCollection.API\packages\Microsoft.NET.Test.Sdk.17.6.3\build\net462\Microsoft.NET.Test.Sdk.props')" />
-  <Import Project="..\MovieCollection.API\packages\Microsoft.CodeCoverage.17.6.3\build\netstandard2.0\Microsoft.CodeCoverage.props" Condition="Exists('..\MovieCollection.API\packages\Microsoft.CodeCoverage.17.6.3\build\netstandard2.0\Microsoft.CodeCoverage.props')" />
-  <Import Project="..\MovieCollection.API\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.props" Condition="Exists('..\MovieCollection.API\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.props')" />
+  <Import Project="..\packages\Microsoft.NET.Test.Sdk.17.6.3\build\net462\Microsoft.NET.Test.Sdk.props" Condition="Exists('..\packages\Microsoft.NET.Test.Sdk.17.6.3\build\net462\Microsoft.NET.Test.Sdk.props')" />
+  <Import Project="..\packages\Microsoft.CodeCoverage.17.6.3\build\netstandard2.0\Microsoft.CodeCoverage.props" Condition="Exists('..\packages\Microsoft.CodeCoverage.17.6.3\build\netstandard2.0\Microsoft.CodeCoverage.props')" />
+  <Import Project="..\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -42,13 +42,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.CodeCoverage.Shim, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\MovieCollection.API\packages\Microsoft.CodeCoverage.17.6.3\lib\net462\Microsoft.VisualStudio.CodeCoverage.Shim.dll</HintPath>
+      <HintPath>..\packages\Microsoft.CodeCoverage.17.6.3\lib\net462\Microsoft.VisualStudio.CodeCoverage.Shim.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\MovieCollection.API\packages\MSTest.TestFramework.2.2.10\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+      <HintPath>..\packages\MSTest.TestFramework.2.2.10\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\MovieCollection.API\packages\MSTest.TestFramework.2.2.10\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+      <HintPath>..\packages\MSTest.TestFramework.2.2.10\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,7 +62,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MovieCollection.API\MovieCollection.API.csproj">
+    <ProjectReference Include="..\MovieCollection.API.csproj">
       <Project>{efdc48f6-0c7f-4298-80a3-2232170b106b}</Project>
       <Name>MovieCollection.API</Name>
     </ProjectReference>
@@ -73,14 +73,14 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\MovieCollection.API\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\MovieCollection.API\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.props'))" />
-    <Error Condition="!Exists('..\MovieCollection.API\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\MovieCollection.API\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.targets'))" />
-    <Error Condition="!Exists('..\MovieCollection.API\packages\Microsoft.CodeCoverage.17.6.3\build\netstandard2.0\Microsoft.CodeCoverage.props')" Text="$([System.String]::Format('$(ErrorText)', '..\MovieCollection.API\packages\Microsoft.CodeCoverage.17.6.3\build\netstandard2.0\Microsoft.CodeCoverage.props'))" />
-    <Error Condition="!Exists('..\MovieCollection.API\packages\Microsoft.CodeCoverage.17.6.3\build\netstandard2.0\Microsoft.CodeCoverage.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\MovieCollection.API\packages\Microsoft.CodeCoverage.17.6.3\build\netstandard2.0\Microsoft.CodeCoverage.targets'))" />
-    <Error Condition="!Exists('..\MovieCollection.API\packages\Microsoft.NET.Test.Sdk.17.6.3\build\net462\Microsoft.NET.Test.Sdk.props')" Text="$([System.String]::Format('$(ErrorText)', '..\MovieCollection.API\packages\Microsoft.NET.Test.Sdk.17.6.3\build\net462\Microsoft.NET.Test.Sdk.props'))" />
-    <Error Condition="!Exists('..\MovieCollection.API\packages\Microsoft.NET.Test.Sdk.17.6.3\build\net462\Microsoft.NET.Test.Sdk.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\MovieCollection.API\packages\Microsoft.NET.Test.Sdk.17.6.3\build\net462\Microsoft.NET.Test.Sdk.targets'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeCoverage.17.6.3\build\netstandard2.0\Microsoft.CodeCoverage.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeCoverage.17.6.3\build\netstandard2.0\Microsoft.CodeCoverage.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeCoverage.17.6.3\build\netstandard2.0\Microsoft.CodeCoverage.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeCoverage.17.6.3\build\netstandard2.0\Microsoft.CodeCoverage.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NET.Test.Sdk.17.6.3\build\net462\Microsoft.NET.Test.Sdk.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NET.Test.Sdk.17.6.3\build\net462\Microsoft.NET.Test.Sdk.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NET.Test.Sdk.17.6.3\build\net462\Microsoft.NET.Test.Sdk.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NET.Test.Sdk.17.6.3\build\net462\Microsoft.NET.Test.Sdk.targets'))" />
   </Target>
-  <Import Project="..\MovieCollection.API\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.targets" Condition="Exists('..\MovieCollection.API\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.targets')" />
-  <Import Project="..\MovieCollection.API\packages\Microsoft.CodeCoverage.17.6.3\build\netstandard2.0\Microsoft.CodeCoverage.targets" Condition="Exists('..\MovieCollection.API\packages\Microsoft.CodeCoverage.17.6.3\build\netstandard2.0\Microsoft.CodeCoverage.targets')" />
-  <Import Project="..\MovieCollection.API\packages\Microsoft.NET.Test.Sdk.17.6.3\build\net462\Microsoft.NET.Test.Sdk.targets" Condition="Exists('..\MovieCollection.API\packages\Microsoft.NET.Test.Sdk.17.6.3\build\net462\Microsoft.NET.Test.Sdk.targets')" />
+  <Import Project="..\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.targets')" />
+  <Import Project="..\packages\Microsoft.CodeCoverage.17.6.3\build\netstandard2.0\Microsoft.CodeCoverage.targets" Condition="Exists('..\packages\Microsoft.CodeCoverage.17.6.3\build\netstandard2.0\Microsoft.CodeCoverage.targets')" />
+  <Import Project="..\packages\Microsoft.NET.Test.Sdk.17.6.3\build\net462\Microsoft.NET.Test.Sdk.targets" Condition="Exists('..\packages\Microsoft.NET.Test.Sdk.17.6.3\build\net462\Microsoft.NET.Test.Sdk.targets')" />
 </Project>
