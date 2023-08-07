@@ -210,7 +210,7 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MovieCollection.API.csproj">
+    <ProjectReference Include="..\MovieCollection.API\MovieCollection.API.csproj">
       <Project>{efdc48f6-0c7f-4298-80a3-2232170b106b}</Project>
       <Name>MovieCollection.API</Name>
     </ProjectReference>
