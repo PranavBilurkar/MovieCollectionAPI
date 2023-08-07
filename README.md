@@ -10,8 +10,9 @@ This is a .NET Framework 4.8 based REST API for managing a movie collection. The
 4. [Authentication and JWT Tokens](#authentication-and-jwt-tokens)
 5. [Role-Based Access](#role-based-access)
 6. [Unit Tests](#unit-tests)
-7. [User Interface](#user-interface)
-8. [Motivation Behind Choices](#motivation-behind-choices)
+7. [Postman Collection](#postman-collection)
+8. [User Interface](#user-interface)
+9. [Motivation Behind Choices](#motivation-behind-choices)
 
 ## Installation and Setup
 
