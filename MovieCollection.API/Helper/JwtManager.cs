@@ -6,12 +6,7 @@ using System.Security.Claims;
 namespace MovieCollectionAPI
 {
     public static class JwtManager
-    {
-        /// <summary>
-        /// Use the below code to generate symmetric Secret Key
-        ///     var hmac = new HMACSHA256();
-        ///     var key = Convert.ToBase64String(hmac.Key);
-        /// </summary>
+    {        
         private const string Secret = "35FEDE15221F2DBF6F4221483A7E21A539BD065552936E9D1F6F93C21096FC7E";
 
         public static string GenerateToken(User user, int expireMinutes = 20)
