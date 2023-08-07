@@ -9,9 +9,7 @@ namespace MovieCollectionAPI
 
         public List<Movie> GetAllMovies() => movieCollection;
 
-        public Movie GetMovieById(int id) => movieCollection.FirstOrDefault(m => m.Id == id);
-
-        //public void AddMovie(Movie movie) => movieCollection.Add(movie);
+        public Movie GetMovieById(int id) => movieCollection.FirstOrDefault(m => m.Id == id);      
 
         public void AddMovie(Movie movie)
         {
