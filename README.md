@@ -5,12 +5,13 @@ This is a .NET Framework 4.8 based REST API for managing a movie collection. The
 ## Table of Contents
 
 1. [Installation and Setup](#installation-and-setup)
-2. [API Endpoints](#api-endpoints)
-3. [Authentication and JWT Tokens](#authentication-and-jwt-tokens)
-4. [Role-Based Access](#role-based-access)
-5. [Unit Tests](#unit-tests)
-6. [User Interface](#user-interface)
-7. [Motivation Behind Choices](#motivation-behind-choices)
+2. [Features](#features)
+3. [API Endpoints](#api-endpoints)
+4. [Authentication and JWT Tokens](#authentication-and-jwt-tokens)
+5. [Role-Based Access](#role-based-access)
+6. [Unit Tests](#unit-tests)
+7. [User Interface](#user-interface)
+8. [Motivation Behind Choices](#motivation-behind-choices)
 
 ## Installation and Setup
 
@@ -18,6 +19,12 @@ This is a .NET Framework 4.8 based REST API for managing a movie collection. The
 2. Open the solution in Visual Studio (Version 2019 or later).
 3. Build the solution to restore NuGet packages and ensure all projects build successfully.
 4. Run the MovieCollection.API project by making it as a startup project from Solution - properties. The API will be hosted on `https://localhost:44361/`.
+
+ ## Features
+1. User registration and login functionality with JWT authentication.
+2. Role-based access control (RBAC) to restrict certain endpoints based on user roles.
+3. CRUD operations for managing movie records.
+4. In-memory list used for storing movie data.
 
 ## API Endpoints
 
