@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "4e7cdffe-e2bc-46a3-a2b7-e183bac7b56c",
+		"name": "MovieCollectionAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3740167"
+	},
+	"item": [
+		{
+			"name": "User Registration & Login",
+			"item": [
+				{
+					"name": "User registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Username\": \"pranavbilurkar\",\r\n  \"Password\": \"pranavbilurkar\",\r\n  \"Role\": \"admin\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/user/register",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlByYW5hdkJpbHVya2FyIiwicm9sZSI6IkFkbWluIiwibmFtZWlkIjoiMSIsIm5iZiI6MTY5MDk4ODY2MiwiZXhwIjoxNjkwOTg5ODYyLCJpYXQiOjE2OTA5ODg2NjJ9.lstGfGIxVfIvoYbnYgxnbLexkM4e76eNUyvk9MfQb1U",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44361/api/user",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Username\": \"pranavbilurkar\",\r\n  \"Password\": \"pranavbilurkar\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/user/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movie Collection Requests",
+			"item": [
+				{
+					"name": "Add Movie to Collection",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IkhhcnNoYWxIYXJndWRlIiwicm9sZSI6IlVzZXIiLCJuYW1laWQiOiIyIiwibmJmIjoxNjkwOTU1MzU5LCJleHAiOjE2OTA5NTY1NTksImlhdCI6MTY5MDk1NTM1OX0.ZoBhCErVUQU63mGCrbwNqwnbuZPA5daDYnEFoMvbIH4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n  \"title\": \"The Matrix\",\r\n  \"year\": 2005,\r\n  \"genre\": \"Science\",\r\n  \"director\": \"Lana\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/movie",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"movie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Movies",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InByYW5hdmJpbHVya2FyIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNjkwOTE0OTMyLCJleHAiOjE2OTA5MTYxMzIsImlhdCI6MTY5MDkxNDkzMn0.ZZJFd1UoXOE1E2RrpRUlMyPdOJ__sNtHKOEsR79haH4",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44361/api/movie",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"movie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movie by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InByYW5hdmJpbHVya2FyIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNjkwOTE0OTMyLCJleHAiOjE2OTA5MTYxMzIsImlhdCI6MTY5MDkxNDkzMn0.ZZJFd1UoXOE1E2RrpRUlMyPdOJ__sNtHKOEsR79haH4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44361/api/movie/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"movie",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Movie by ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IkhhcnNoYWxIYXJndWRlIiwicm9sZSI6IlVzZXIiLCJuYW1laWQiOiIxIiwibmJmIjoxNjkwOTU5MDkwLCJleHAiOjE2OTA5NjAyOTAsImlhdCI6MTY5MDk1OTA5MH0.WnLfj_Hki17hMIIcSXAG8YKRATIvAUiWWRRdKCdj8Rs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": 1,\r\n    \"Title\": \"The Matrix update hh\",\r\n    \"Year\": 2005,\r\n    \"Genre\": \"Science\",\r\n    \"Director\": \"Lana\"    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44361/api/movie/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"movie",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Movie from Collection",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InByYW5hdmJpbHVya2FyIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNjkwOTE0OTMyLCJleHAiOjE2OTA5MTYxMzIsImlhdCI6MTY5MDkxNDkzMn0.ZZJFd1UoXOE1E2RrpRUlMyPdOJ__sNtHKOEsR79haH4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44361/api/movie/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"movie",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Collection",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IkhhcnNoYWxIYXJndWRlIiwicm9sZSI6IlVzZXIiLCJuYW1laWQiOiIxIiwibmJmIjoxNjkwOTU2OTMwLCJleHAiOjE2OTA5NTgxMzAsImlhdCI6MTY5MDk1NjkzMH0.0E3FZ2HREqhKUItcvhGpAZsbt40GfHyHQfaIqg6yItc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44361/api/movie?keyword=matrix",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44361",
+							"path": [
+								"api",
+								"movie"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "matrix"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
