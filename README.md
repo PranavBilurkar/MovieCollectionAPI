@@ -17,8 +17,10 @@ This is a .NET Framework 4.8 based REST API for managing a movie collection. The
 
 1. Clone the repository to your local machine.
 2. Open the solution in Visual Studio (Version 2019 or later).
-3. Build the solution to restore NuGet packages and ensure all projects build successfully.
+3. Build the solution to restore NuGet packages and ensure all projects build successfully. I suggest you to build API project first to create packages.
 4. Run the MovieCollection.API project by making it as a startup project from Solution - properties. The API will be hosted on `https://localhost:44361/`.
+Note - You might get warning regarding the conflicts of "Unity.Abstractions", to fix that click on warning and click Yes.
+
 
  ## Features
 1. User registration and login functionality with JWT authentication.
