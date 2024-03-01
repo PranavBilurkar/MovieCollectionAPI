@@ -15,12 +15,12 @@ namespace MovieCollectionAPI
         }
 
         [HttpPost]
-        [AllowAnonymous] // Allow access to this endpoint without authentication
+        [AllowAnonymous] 
         [Route("api/user/register")]
         public IHttpActionResult Register(User user)
         {
             Log.Information("Register endpoint called. Request received: {@User}", user);
-            // Validate the user object
+            // Validate
             if (string.IsNullOrWhiteSpace(user.Username) || string.IsNullOrWhiteSpace(user.Password))
             {
                 return BadRequest("Username and password are required.");
@@ -32,23 +32,21 @@ namespace MovieCollectionAPI
                 Log.Warning("Username '{Username}' already exists. Registration failed.", user.Username);
                 return BadRequest($"Username '{user.Username}' already exists.");
             }
-            // Add the new user to the repository
+            // Add the new user 
             _userService.AddUser(user);
 
-            Log.Information("User registered successfully. Username: {Username}", user.Username);
-
-            // Return a success response
+            Log.Information("User registered successfully. Username: {Username}", user.Username);            
             return StatusCode(HttpStatusCode.Created);
         }
 
         [HttpPost]
         [AllowAnonymous] 
         [Route("api/user/login")]
-        [ResponseType(typeof(string))] // The response will be a JWT token
+        [ResponseType(typeof(string))] 
         public IHttpActionResult Login(User user)
         {
             Log.Information("Login endpoint called. Request received: {@User}", user);
-            // Validate the user object
+            // Validate
             if (string.IsNullOrWhiteSpace(user.Username) || string.IsNullOrWhiteSpace(user.Password))
             {
                 Log.Warning("Invalid request. Username and password are required.");
@@ -58,7 +56,7 @@ namespace MovieCollectionAPI
             // Find the user by username
             var existingUser = _userService.GetUserByUsername(user.Username);
 
-            // Check if the user exists and if the provided password matches the stored password
+            // Check if the user exists
             if (existingUser == null || existingUser.Password != user.Password)
             {
                 Log.Warning("Unauthorized access. Invalid username or password for user: {Username}", user.Username);
@@ -67,8 +65,7 @@ namespace MovieCollectionAPI
            
             string token = JwtManager.GenerateToken(existingUser);
             Log.Information("User logged in successfully & Token is generated. Username: {Username}", user.Username);
-
-            // Return the JWT token as a response
+          
             return Ok(token);
         }
 
@@ -81,7 +78,7 @@ namespace MovieCollectionAPI
             if (users == null || users.Count == 0)
             {
                 Log.Warning("No users found.");
-                return NotFound(); // Return a 404 Not Found response if there are no movies.
+                return NotFound(); 
             }
 
             Log.Information("Number of users found: {UserCount}", users.Count);
