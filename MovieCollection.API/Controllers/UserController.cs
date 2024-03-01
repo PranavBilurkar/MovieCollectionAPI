@@ -42,7 +42,7 @@ namespace MovieCollectionAPI
         }
 
         [HttpPost]
-        [AllowAnonymous] // Allow access to this endpoint without authentication
+        [AllowAnonymous] 
         [Route("api/user/login")]
         [ResponseType(typeof(string))] // The response will be a JWT token
         public IHttpActionResult Login(User user)
@@ -62,13 +62,10 @@ namespace MovieCollectionAPI
             if (existingUser == null || existingUser.Password != user.Password)
             {
                 Log.Warning("Unauthorized access. Invalid username or password for user: {Username}", user.Username);
-                return Unauthorized(); // Return a 401 Unauthorized response if the user is not authenticated
+                return Unauthorized(); 
             }
-
-            // In a real-world scenario, you would use a proper JWT authentication library to generate the token.
-            // For simplicity, let's assume you have a custom method to generate the token for demonstration purposes.
+           
             string token = JwtManager.GenerateToken(existingUser);
-
             Log.Information("User logged in successfully & Token is generated. Username: {Username}", user.Username);
 
             // Return the JWT token as a response
